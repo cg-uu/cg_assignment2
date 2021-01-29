@@ -46,7 +46,7 @@ Try now to manipulate the model by applying different combinations of `glm::tran
 
 Finally, use [`glm::lookAt`](http://glm.g-truc.net/0.9.5/api/a00176.html#ga454fdf3163c2779eeeeeb9d75907ce97) to set up a new view matrix and [`glm::perspective`](http://glm.g-truc.net/0.9.5/api/a00176.html#ga24983212d8d25b5b32e30d574dfccd1c) to set up a perspective projection matrix (these two matrices will define our virtual camera). Experiment with the different parameters. Your final view matrix should combine the matrix from `glm::lookAt` with the trackball matrix, so that the trackball rotation is applied first of the two transforms.
 
-Note: nodes in glTF scenes can have children, and may also store a `mat4` matrix as transform instead of translation, scaling, and rotation data. However, at this step you can ignore this when computing your model matrices.
+Note: if you look in the glTF [quick reference](https://www.khronos.org/files/gltf20-reference-guide.pdf), you see that nodes in scenes can have children or store a full 4x4 matrix as transform instead of separate translation, scaling, and rotation data. However, at this step you can ignore this when computing your model matrices.
 
 ## Part 3 - Basic per-vertex lighting
 
